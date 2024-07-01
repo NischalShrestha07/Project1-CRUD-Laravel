@@ -9,3 +9,4 @@ Route::get('/', function () {
 // ->name('employees.index'); this 'employee.index' is just a name given by us so there is no difference if we write something else as well.
 
 Route::get("/employees", [EmployeeController::class, 'index'])->name('employees.index');
+Route::get("/employees/create", [EmployeeController::class, 'create'])->name('employees.create');
