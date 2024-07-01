@@ -12,6 +12,6 @@ class EmployeeController extends Controller
     }
     public function create()
     {
-        echo "Create Form";
+        return view('employee.create');
     }
 }

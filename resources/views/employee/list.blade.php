@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>SIMPLE LARAVEL 11 CRUD </title>
-    <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">//
+    <link rel="stylesheet" href="{{asset('assets/css/bootstrap.min.css')}}">
 
 
 </head>
@@ -22,7 +22,7 @@
         <div class="d-flex justify-content-between">
             <div class="h5">Employees</div>
             <div>
-                <a href="#" class="btn btn-primary">Create</a>
+                <a href="{{route('employee.create')}}" class="btn btn-primary">Create</a>
             </div>
         </div>
         <div class="card" border-0 shadow-lg>
