@@ -12,6 +12,17 @@
 
 <body>
 
+    {{-- for displayong any kinds of errors --}}
+    @if ($errors->any())
+    <ul>
+        @foreach ($errors->all() as $error)
+        <li>{{$error}}</li>
+        @endforeach
+    </ul>
+
+    @endif
+    {{-- -------------------------------------- --}}
+
     <div class="bg-dark py-3">
         <div class="container">
             <div class="h4 text-white">SIMPLE LARAVEL 11 CRUD</div>
@@ -34,7 +45,7 @@
 
                     <div class="mb-3">
                         <label for="name" class="form-label">Name</label>
-                        <input type="text" name="name" id="name" placeholder="Enter Name" class="form-control" value="
+                        <input type="text" name="name" placeholder="Enter Name" class="form-control" value="
                             {{old('name')}}">
 
 
@@ -42,23 +53,19 @@
 
                     <div class="mb-3">
                         <label for="email" class="form-label">Email</label>
-                        <input type="text" name="email" id="email" placeholder="Enter Email" class="form-control" value="
+                        <input type="text" name="email" placeholder="Enter Email" class="form-control" value="
                             {{old('email')}}">
 
                     </div>
 
                     <div class="mb-3">
                         <label for="address" class="form-label">Address</label>
-                        <textarea name="address" id="address" cols="30" rows="4" placeholder="Enter Address"
+                        <textarea name="address" cols="30" rows="4" placeholder="Enter Address"
                             class="form-control">{{old('address')}}</textarea>
                     </div>
 
-                    <div class="mb-3">
-                        <label for="image" class="form-label"></label>
-                        {{-- <input type="file" name="image"> --}}
-                    </div>
                 </div>
-                <button class=" btn btn-primary mt-3">Save Employee</button>
+                <button type="submit" class=" btn btn-primary mt-3">Save Employee</button>
             </div>
         </form>
     </div>

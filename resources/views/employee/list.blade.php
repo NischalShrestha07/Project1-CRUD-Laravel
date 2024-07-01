@@ -18,6 +18,14 @@
             <div class="h4 text-white">SIMPLE LARAVEL 11 CRUD</div>
         </div>
     </div>
+    <div>
+        @if (@session()->has('success'))
+        <div>
+            {{session('success')}}
+        </div>
+        @endif
+
+    </div>
     <div class="container py-3">
         <div class="d-flex justify-content-between p-45">
             <div class="h5">Employees</div>
@@ -36,7 +44,20 @@
                         <th>Address</th>
                         <th>Action</th>
                     </tr>
+                    @foreach ($employees as $employee)
                     <tr>
+                        <td>{{$employee-> id}}</td>
+                        <td>{{$employee-> name}}</td>
+                        <td>{{$employee-> email}}</td>
+                        <td>{{$employee-> address}}</td>
+                    </tr>
+
+                    @endforeach
+
+
+
+
+                    {{-- <tr>
                         <td>1</td>
                         <td></td>
                         <td>Name</td>
@@ -46,7 +67,7 @@
                             <a href="#" class="btn btn-primary btn-sm">Edit</a>
                             <a href="#" class="btn btn-danger btn-sm">Delete</a>
                         </td>
-                    </tr>
+                    </tr> --}}
 
                 </table>
             </div>
