@@ -19,7 +19,7 @@
         </div>
     </div>
     <div class="container py-3">
-        <div class="d-flex justify-content-between">
+        <div class="d-flex justify-content-between p-45">
             <div class="h5">Employees</div>
             <div>
                 <a href="{{route('employee.create')}}" class="btn btn-primary">Create</a>
